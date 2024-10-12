@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+h1 {
+  @apply font-bold m-2 text-2xl;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+[data-type="slider"] div {
+  transition: 0.5s;
+}
+
+[data-type="slider"]:hover div {
+  animation-play-state: paused;
+  filter: blur(3px);
+}
+
+[data-type="slider"] div:hover {
+  filter: blur(0);
+}
