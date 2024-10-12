@@ -44,12 +44,14 @@ function Infinite_slider() {
           {/* Title Section */}
           <div className="flex mobile:block w-full gap-4 justify-between items-center mb-8">
             <div
-              className={`text-8xl mobile:text-5xl text-left mobile:text-center relative font-bold z-50 bg-[rgba(255,126,95,1)] text-transparent bg-clip-text ${styles.text_glow}`}
+              className={`text-8xl mobile:text-5xl text-left mobile:text-center relative font-bold z-50 ${styles.text_glow}`}
             >
               Experience the Rhythm
             </div>
             <div className="w-4/12 mobile:w-full flex flex-col">
-              <div className="text-2xl mobile:hidden font-bold text-center">
+              <div
+                className={`text-2xl mobile:hidden font-bold text-center  ${styles.text_glow}`}
+              >
                 DD DEV
               </div>
               <div className="mobile:hidden">
@@ -66,7 +68,7 @@ function Infinite_slider() {
               backgroundPosition: "center",
             }}
           >
-            <div className="h-fit self-center z-40 mobile:w-[50%] mobile:block hidden">
+            <div className="h-fit self-center z-40 mobile:w-[60%] mobile:block hidden">
               <WriteUpText />
             </div>
             <div className="h-full flex-1 justify-center relative flex">
@@ -86,7 +88,9 @@ function Infinite_slider() {
             className={`w-full overflow-hidden relative ${styles.slider_mask}`}
           >
             {/* Logo Section */}
-            <h2 className="text-2xl font-bold text-center my-4">
+            <h2
+              className={`text-2xl font-bold text-center my-4 ${styles.text_glow}`}
+            >
               Explore Our Esteemed Partners
             </h2>
             <div
@@ -115,7 +119,9 @@ function Infinite_slider() {
               ))}
             </div>
             {/* Robo Section */}
-            <h2 className="text-2xl font-bold text-center mb-4">
+            <h2
+              className={`text-2xl font-bold text-center mb-4  ${styles.text_glow}`}
+            >
               Meet The Innovative Robotics
             </h2>
             <div
@@ -153,7 +159,7 @@ function Infinite_slider() {
 
 function WriteUpText() {
   return (
-    <div className="text-sm text-gray-300 mobile:text-black font-bold text-center mobile:max-w-[90%] mx-auto mobile:p-4 h-fit mobile:backdrop-blur-md leading-loose mobile:rounded-3xl m-2 ">
+    <div className="text-sm text-gray-300 mobile:text-black font-bold text-center mobile:max-w-[90%] mx-auto mobile:p-4 h-fit mobile:backdrop-blur-md leading-loose mobile:rounded-3xl m-2 mobile:mr-0">
       Welcome to the Infinite Slider experience! Here, creativity meets
       technology as we showcase a stunning array of logos and robotic designs.
       Dive into a world where innovation takes center stage, and let your
