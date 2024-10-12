@@ -66,17 +66,21 @@ function Infinite_slider() {
               backgroundPosition: "center",
             }}
           >
-            <div className="h-fit self-center z-40 mobile:min-w-[70%] mobile:block hidden">
+            <div className="h-fit self-center z-40 mobile:w-[50%] mobile:block hidden">
               <WriteUpText />
             </div>
-            <Image
-              src={kasimir}
-              alt="Liquid Metal"
-              width={500}
-              height={300}
-              quality={100}
-              className="absolute mobile:relative mobile:-bottom-0 -bottom-28 mobile:self-center mobile:justify-center object-cover mobile:max-w-[30%] object-top mobile:h-full"
-            />
+            <div className="h-full flex-1 justify-center relative flex">
+              {" "}
+              <Image
+                src={kasimir}
+                alt="Liquid Metal"
+                width={500}
+                height={300}
+                quality={100}
+                className="absolute mobile:relative mobile:-bottom-0 -bottom-28 mobile:self-center mobile:justify-center object-cover mobile:max-full mobile:h-full"
+                style={{ objectPosition: "-110px 10px" }}
+              />
+            </div>
           </div>
           <div
             className={`w-full overflow-hidden relative ${styles.slider_mask}`}
@@ -149,7 +153,7 @@ function Infinite_slider() {
 
 function WriteUpText() {
   return (
-    <div className="text-sm text-gray-300 mobile:text-black font-bold text-justify mobile:max-w-[90%] mx-auto mobile:p-4 h-fit mobile:backdrop-blur-md leading-loose mobile:rounded-3xl m-2 ">
+    <div className="text-sm text-gray-300 mobile:text-black font-bold text-center mobile:max-w-[90%] mx-auto mobile:p-4 h-fit mobile:backdrop-blur-md leading-loose mobile:rounded-3xl m-2 ">
       Welcome to the Infinite Slider experience! Here, creativity meets
       technology as we showcase a stunning array of logos and robotic designs.
       Dive into a world where innovation takes center stage, and let your
